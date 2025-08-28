@@ -1,5 +1,6 @@
-# Analyzing EV and Hybrid car adoption in Washington State (2025)
-## Data Analytics Project
+# Analyzing EV and Hybrid car adoption in Washington State (2025) Data Analytics Project
 
 ### Introduction
-Data analytics project analyzing electric and hybrid vehicle trends in Washington State using SQL and Tableau. Includes data preprocessing, analysis, and dashboard creation to uncover insights on EV growth patterns.
+This project analyzes **electric and hybrid vehicle adoption trends in Washington State (2025)** using **SQL** for data cleaning and **Tableau** for interactive visualization.  
+The goal is to uncover insights such as:
+
