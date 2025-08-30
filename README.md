@@ -19,6 +19,7 @@ The main tools that will be used for this project are **SQL(Postgres)** for the 
 - Improve my data cleaning and analytical skills
 - Improve my dashboard creation skills with Tableau
 - Improve my ability to use SQL to obtain data insights
+- Improve my data storytelling ability
 
 ## Dataset Information
 The dataset used for this project was obtained from Kaggle's public datasets.
