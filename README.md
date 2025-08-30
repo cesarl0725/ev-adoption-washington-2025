@@ -35,5 +35,5 @@ The dataset contains the following columns
 - Electric Vehicle Type
 - Clean Alternative Fuel Vehicle (CAFV) Eligibility
   
-If you wish to visit the dataset yourself, follow the link below
+If you wish to visit the dataset yourself, use the following link!
 https://www.kaggle.com/datasets/samanfatima7/2025-electric-and-hybrid-cars-in-washington-usa
