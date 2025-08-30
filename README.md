@@ -1,5 +1,5 @@
 # Analyzing EV and Hybrid car adoption in Washington State (2025) Data Analytics Project
-
+---
 ## Project Overview
 
 ### Introduction
