@@ -1,6 +1,6 @@
 # Analyzing EV and Hybrid car adoption in Washington State (2025) Data Analytics Project
 
-### Introduction
+## Introduction
 This project analyzes **electric and hybrid vehicle adoption trends in Washington State (2025)** using **SQL** for data cleaning and **Tableau** for interactive visualization.  
 
 The goal of the project is to answer these key **business questions**:
@@ -12,7 +12,7 @@ The goal of the project is to answer these key **business questions**:
 - How does price relate to range?
 - Which electric utilities serve the most EVs?
 
-### Tools
+## Tools
 The main tools that will be used for this project are **SQL(Postgres)** for the data cleaning and analysis, and **Tableau(Tableau Public)** for the data visualization and dashboard creation
 
 ## Personal Goals
