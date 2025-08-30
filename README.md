@@ -23,6 +23,13 @@ The main tools that will be used for this project are **SQL(Postgres)** for the 
 - Improve my ability to use SQL to obtain data insights
 - Improve my data storytelling ability
 
+## 🏛 Source & License
+- **Publisher:** data.wa.gov — Washington State Open Data Program
+- **Maintainer:** Washington State Department of Licensing
+- **License:** Open Data Commons Open Database License (ODbL) v1.0
+- **Attribution:**  
+  Contains information from the State of Washington Open Data Program, licensed under the Open Data Commons Open Database License (ODbL).
+
 ### Dataset Information
 The dataset used for this project was obtained from Kaggle's public datasets.
 The dataset contains the following columns
