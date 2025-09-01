@@ -1,0 +1,27 @@
+/*
+- Purpose: The purpose of this query is to streamline the clean_alternative_fuel_vehicle_(cafv)_eligibility column.
+This allows the audience to be able to clearly understand what they are seeing when interacting with 
+visuals related to this column.
+
+- Code detail: To make sure I accounted for all the posibilities in my case statement I included ELSE 'DOUBLE CHECK' so in the 
+case that I missed a posibility I would be able to tell immediately and fix my mistake.
+*/
+
+SELECT
+vin,
+county,
+city,
+state,
+postal_code,
+model_year,
+make,
+model,
+electric_vehicle_type,
+CASE
+	WHEN "clean_alternative_fuel_vehicle_(cafv)_eligibility" LIKE '%unknown%' THEN 'unknown'
+	WHEN "clean_alternative_fuel_vehicle_(cafv)_eligibility" LIKE '%Not eligible%' THEN 'not eligible'
+	WHEN "clean_alternative_fuel_vehicle_(cafv)_eligibility" LIKE '%Vehicle Eligible%' THEN 'eligible'
+	ELSE 'DOUBLE CHECK'
+END AS clean_alternative_fuel_vehicle_eligibility
+FROM
+ev_adoption_port_project
