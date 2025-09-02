@@ -7,7 +7,6 @@ visuals related to this column.
 - Code detail: To make sure I accounted for all the posibilities in my case statement I included ELSE 'DOUBLE CHECK' so in the 
 case that I missed a posibility I would be able to tell immediately and fix my mistake.
 */
-
 SELECT
 vin,
 county,
@@ -17,7 +16,7 @@ postal_code,
 model_year,
 make,
 model,
-electric_vehicle_type,
+electric_vehicle_type_v1,
 CASE
 	WHEN "clean_alternative_fuel_vehicle_(cafv)_eligibility" LIKE '%unknown%' THEN 'unknown'
 	WHEN "clean_alternative_fuel_vehicle_(cafv)_eligibility" LIKE '%Not eligible%' THEN 'not eligible'
