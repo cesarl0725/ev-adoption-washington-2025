@@ -50,7 +50,7 @@ https://www.kaggle.com/datasets/samanfatima7/2025-electric-and-hybrid-cars-in-wa
 ---
 
 ## Data Processing
-Before even touching the data, I verified that the dataset contained all the necessary data required to answer all the key business questions.
+**Firstly**, before even touching the data, I verified that the dataset contained all the necessary data required to answer all the key business questions.
 Shortly after doing this, I began on data transformations. The first modification was to the Clean Alternative Fuel Vehicle column. Originally, it contained long descriptive strings like:
 
 ***"Eligibility unknown as battery range has not been researched"***
@@ -60,3 +60,19 @@ I standardized these into concise values such as:
 ***"unknown"***
 
 Why? Because one of the key responsibilities of a data analyst is to consider the audience. Visualizations should communicate insights quickly and clearly. Long strings of text can confuse or overwhelm viewers, making it harder to interpret the message at a glance. By cleaning and standardizing this column, I ensured that the visuals are easy to understand, drastically improving the audience's experience.
+
+**Secondly**, I carried out an additional transformation, this time targeting the electric_vehicle_type_v1 column. The objective was twofold: first, to simplify the original values into more digestible categories for clearer visualizations, and second, to consolidate all transformations into a single, streamlined table to facilitate analysis.
+
+Originally, this column contained long strings like:
+
+***"Battery Electric Vehicle (BEV)"***
+
+I standardized these into concise labels such as:
+
+***"BEV"***
+
+To achieve this, I took a slightly different approach than before. Instead of creating multiple intermediate tables for each transformation, I referenced the original query as a subquery within the new statement. This allowed me to apply both transformations on electric_vehicle_type_v1 and clean_alternative_fuel_vehicle_eligibility in one go, resulting in a new table called ev_adoption_port_project_processed.
+
+This greatly aids my analysis as consolidating transformations into a single query reduces complexity and improves performance. It also ensures that all cleaned data is readily available for analysis and visualization, without the need to track multiple transformation steps across different tables.
+
+### With that, we finish with our data processing and begin our analysis!
