@@ -4,8 +4,8 @@ Query 1
 This allows the audience to be able to clearly understand what they are seeing when interacting with 
 visuals related to this column.
 
-- Code detail: To make sure I accounted for all the posibilities in my case statement I included ELSE 'DOUBLE CHECK' so in the 
-case that I missed a posibility I would be able to tell immediately and fix my mistake.
+- Code detail: To make sure I accounted for all the possibilities in my case statement, I included ELSE 'DOUBLE CHECK' so in the 
+case that I missed a possibility, I would be able to tell immediately and fix my mistake.
 */
 SELECT
 vin,
@@ -30,9 +30,9 @@ ev_adoption_port_project
 
 /*
 Query 2/ New  table creation
-- Purpose: The purpose of this query is twofold first transform the electric_vehicle_type_v1 to include a more streamlined 
-version of its original content making visualizations more digestable. Second create a new table where all the data 
-transformatins are in one place, making analysis more straight forward.
+- Purpose: The purpose of this query is twofold: first, transform the electric_vehicle_type_v1 to include a more streamlined 
+version of its original content, making visualizations more digestible. Second, create a new table where all the data 
+transformations are in one place, making analysis more straightforward.
 
 - Code detail: Instead of creating two separate tables, one for the original transformation and another for this transformation
 I chose to reference the original query as a subquery within this statement. This eliminates the need to create an 
