@@ -79,6 +79,7 @@ This greatly aids my analysis as consolidating transformations into a single que
 
 ---
 ## Data Analysis
+### Question 1: “What are the top 10 counties with the most electric cars?”
 **To begin**, I started by validating that the dataset contained the necessary fields to answer our first question!
 “What are the top 10 counties with the most electric cars?”
 This ensured that the analysis would be accurate and based on complete data.
