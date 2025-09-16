@@ -1,1 +1,25 @@
+/*
+Analysis Query 1
+- Purpose: To solve the first analysis question, "What are the top 10 counties with the most electric cars?". This is done by counting the
+distinct rows of the table through the count() and grouping them by the county. Allowing us to discover the distribution of
+electric vehicles by county.
 
+- Code detail/insight: During the first version of this query, I made a vital mistake, as I did not use distinct within count()
+making my result inaccurate, as Vin instances sometimes repeat. Thankfully, I caught on and fixed the error.
+*/
+
+CREATE TABLE question_1_view AS
+SELECT
+count(DISTINCT vin) AS electric_vehicle_count,
+county
+FROM
+ev_adoption_port_project_processed
+GROUP BY
+county
+HAVING
+county IS NOT NULL
+ORDER BY
+electric_vehicle_count DESC
+LIMIT
+10
+--------------------------------------------------------------------------------------------------------------------------------------
