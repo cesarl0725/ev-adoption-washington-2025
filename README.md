@@ -6,7 +6,7 @@
 This project analyzes **electric and hybrid vehicle adoption trends in Washington State (2025)** using **SQL** for data cleaning and **Tableau** for interactive visualization.  
 
 The goal of the project is to answer these key **business questions**:
-- Which counties have the most electric cars?
+- What are the top 10 counties with the most electric cars?
 - What are the most popular car brands and models?
 - Are fully electric cars (BEVs) more common than plug-in hybrids (PHEVs)?
 - How has EV adoption changed by model year?
@@ -76,3 +76,17 @@ To achieve this, I took a slightly different approach than before. Instead of cr
 This greatly aids my analysis as consolidating transformations into a single query reduces complexity and improves performance. It also ensures that all cleaned data is readily available for analysis and visualization, without the need to track multiple transformation steps across different tables.
 
 ### With that, we finish with our data processing and begin our analysis!
+
+---
+## Data Analysis
+**To begin**, I started by validating that the dataset contained the necessary fields to answer our first question!
+“What are the top 10 counties with the most electric cars?”
+This ensured that the analysis would be accurate and based on complete data.
+
+I proceeded by writing an initial query to count vehicles by county using COUNT(*) with a GROUP BY clause for county. However, I quickly noticed this approach contained a major mistake as VIN values can appear multiple times due to duplicate registrations or updates, which would instantly ruin the accuracy of the query.
+
+To correct this, I updated the query to use COUNT(DISTINCT vin). This guarantees that each unique vehicle is counted only once, providing a truly accurate measure of electric vehicle distribution by county.
+Finally, I added an ORDER BY clause to sort the results in descending order and applied LIMIT 10 to return only the top 10 counties. This helps me streamline the visualization.
+With that, the first question has been answered!
+
+The final step for this question is **visualization**
