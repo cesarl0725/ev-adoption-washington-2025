@@ -40,7 +40,17 @@ The dataset contains the following columns
 If you wish to visit the dataset yourself, use the following link!
 https://www.kaggle.com/datasets/samanfatima7/2025-electric-and-hybrid-cars-in-washington-usa
 
-## Source & License
+### Term Key
+**Electric vehicle type column**
+- Battery Electric Vehicle = BEV
+- Plug-in Hybrid Electric Vehicle = PHEV
+  
+**Clean alternative fuel vehicle eligibility column**
+- Eligibility unknown as battery range has not been researched = unknown
+- Clean Alternative Fuel Vehicle Eligible = eligible
+- Not eligible due to low battery range = not eligible
+
+### Source & License
 - **Publisher:** data.wa.gov — Washington State Open Data Program
 - **Maintainer:** Washington State Department of Licensing
 - **License:** Open Data Commons Open Database License (ODbL) v1.0
