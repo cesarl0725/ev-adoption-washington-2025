@@ -7,7 +7,7 @@ This project analyzes **electric and hybrid vehicle adoption trends in Washingto
 
 The goal of the project is to answer these key **business questions**:
 - What are the top 10 counties with the most electric cars?
-- What are the most popular car brands and models?
+- What are the top 5 most popular car brands in each county?
 - Are fully electric cars (BEVs) more common than plug-in hybrids (PHEVs)?
 - How has EV adoption changed by model year?
 - Which cars have the best electric range?
@@ -106,3 +106,13 @@ King possesses more EVs than any other county. Even when taking into account its
 **Based on this insight**, I would recommend an organization trying to break into the Washington state region to try one of two things
 - **Break into the existing King market** If an EV seller is attempting to have success from the start, the best place to begin is King, as its population has a taste for EVs already.
 - **Build your own new market** Based on the success of EVs in King, it can be inferred that other neighboring counties could develop a taste for EVs of their own. If immediate gains are not the priority, it is worth considering trying to build your own market of EVs in another county.
+
+### Question 2: "What are the top 5 most popular car brands within the top 10 county's?"
+To answer this question, I created a query to see the number of EVs owned for each brand in each county. The query was straightforward, as I wanted to do all the filtering and manipulating in Tableau to further develop my skills on that end.
+Although the query did go through multiple iterations as I was unsure of how to handle the COUNT function. The version I ended up with is COUNT(DISTINCT vin) as it accurately counts unique EVs while  avoiding duplicates. It also groups by both make and county, giving a clear breakdown of EV adoption by brand in each location.
+
+After completing the visualization through a mixture of filters and sets, I was able to draw multiple conclusions that can be used in a variety of business scenarios. The main pattern I noticed was that the distribution of EV ownership became more skewed
+in Tesla's favor as you went down the list.
+
+**Based on this insight** If an EV manufacturer is trying to break into the Washington market, they must be careful about which county they strike, as the smaller counties clearly favor Teslas more than any other EV brand. 
+My recommendation would be to start with the larger markets like King or Pierce before expanding as their markets clearly show more brand diversity.
