@@ -24,3 +24,25 @@ electric_vehicle_count DESC
 LIMIT
 10
 --------------------------------------------------------------------------------------------------------------------------------------
+/*
+Question 2: "What are the top 5 most popular car brands within the top 10 county's?"
+Analysis Query 2
+- Purpose: To see the number of EVs owned for each brand in each county to identify the 5 most popular
+brands in each county during the visualization process.
+
+- Code detail/insight during the production of this query, I had trouble deciding how to structure the COUNT() function.
+After thinking over it, I decided to go with COUNT(DISTINCT vin) as this allows me to get only the unique vehicles in each
+county.
+*/
+
+CREATE TABLE question_2_view AS
+SELECT
+make,
+county,
+COUNT(DISTINCT vin) AS Number_of_EVS
+FROM
+ev_adoption_port_project_processed
+GROUP BY
+make,county
+ORDER BY
+Number_of_EVS DESC
