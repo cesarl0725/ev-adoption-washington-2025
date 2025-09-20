@@ -100,4 +100,9 @@ To correct this, I updated the query to use COUNT(DISTINCT vin). This guarantees
 Finally, I added an ORDER BY clause to sort the results in descending order and applied LIMIT 10 to return only the top 10 counties. This helps me streamline the visualization.
 With that, the first question has been answered!
 
-The final step for this question is **visualization**
+The final step for this question is **visualization**, which, for this particular question, is straightforward, as the best way to demonstrate the top 10 countries is a bar chart. Through the visualization of the data, the dominance of King became clear.
+King possesses more EVs than any other county. Even when taking into account its closest competitor, Snohomish King still possesses 5,319 move EVs.
+
+**Based on this insight**, I would recommend an organization trying to break into the Washington state region to try one of two things
+- **Break into the existing King market** If an EV seller is attempting to have success from the start, the best place to begin is King, as its population has a taste for EVs already.
+- **Build your own new market** Based on the success of EVs in King, it can be inferred that other neighboring counties could develop a taste for EVs of their own. If immediate gains are not the priority, it is worth considering trying to build your own market of EVs in another county.
