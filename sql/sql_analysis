@@ -25,7 +25,7 @@ LIMIT
 10
 --------------------------------------------------------------------------------------------------------------------------------------
 /*
-Question 2: "What are the top 5 most popular car brands within the top 10 county's?"
+Question 2: "What are the top 5 most popular car brands within the top 10 counties?"
 Analysis Query 2
 - Purpose: To see the number of EVs owned for each brand in each county to identify the 5 most popular
 brands in each county during the visualization process.
