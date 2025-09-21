@@ -115,4 +115,12 @@ After completing the visualization through a mixture of filters and sets, I was 
 in Tesla's favor as you went down the list.
 
 **Based on this insight** If an EV manufacturer is trying to break into the Washington market, they must be careful about which county they strike, as the smaller counties clearly favor Teslas more than any other EV brand. 
-My recommendation would be to start with the larger markets like King or Pierce before expanding as their markets clearly show more brand diversity.
+My recommendation would be to start with the larger markets like King or Pierce before expanding as their markets clearly show more brand diversity. 
+
+### Question 3: "Are fully electric cars (BEVs) more common than plug-in hybrids (PHEVs)?"
+To answer this question, I created a query to isolate the EV type for each distinct vehicle using its VIN. The goal was to determine whether fully electric cars (BEVs) are more common than plug-in hybrids (PHEVs). I used PostgreSQL’s DISTINCT ON function, which allowed me to extract only one row per VIN, ensuring that each vehicle was counted once, even if it appeared multiple times in the dataset.
+
+Afterward I completed the visualization in the form of a pie chart, which showed that BEVs are preferred 25% more than PHEVs.
+
+**Based on this insight** If an EV manufacturer is trying to break into the Washington market, they should prioritize making BEVs, as the market has a preference for that type of vehicle.
+
