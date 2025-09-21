@@ -3,7 +3,7 @@
 ## Project Overview
 
 ### Introduction
-This project analyzes **electric and hybrid vehicle adoption trends in Washington State (2025)** using **SQL** for data cleaning and **Tableau** for interactive visualization.  
+This project analyzes **electric and hybrid vehicle adoption trends in Washington State (2025)**
 
 The goal of the project is to answer these key **business questions**:
 - What are the top 10 counties with the most electric cars?
