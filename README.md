@@ -15,10 +15,15 @@ The goal of the project is to answer these key **business questions**:
 - Which electric utilities serve the most EVs?
 
 ### Tools
-The main tools that will be used for this project are **SQL(Postgres)** for the data cleaning and analysis, and **Tableau(Tableau Public)** for the data visualization and dashboard creation
+The main tools that will be used for this project are **SQL(Postgres)** for the data processing and analysis, and **Tableau(Tableau Public)** for the data visualization and dashboard creation
 
+### Queries & Visuals
+- All of the SQL queries used in this project are within the **sql** folder (divided into 2 groups: processing queries and analysis queries)
+- Demo visualizations are present within the **Tableau Views**
+- If you are interested in the full visualizations follow this link _________________.
+  
 ### Personal Goals
-- Improve my data cleaning and analytical skills
+- Improve my data processing and analytical skills
 - Improve my dashboard creation skills with Tableau
 - Improve my ability to use SQL to obtain data insights
 - Improve my data storytelling ability
