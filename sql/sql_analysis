@@ -46,3 +46,21 @@ GROUP BY
 make,county
 ORDER BY
 Number_of_EVS DESC
+--------------------------------------------------------------------------------------------------------------------------------------
+/*
+Question 3: "Are fully electric cars (BEVs) more common than plug-in hybrids (PHEVs)?""
+Analysis Query 3
+- Purpose: To find the EV type for each distinct vin. This allows me to see which EV type is more popular
+during the visualization process.
+
+-Code detail/insight: To isolate the EV type of each vehicle, I used the Postgres unique function DISTINCT ON.
+Because it allows me to extract only one row for that specific value, which in this case would be the vin.
+*/
+
+CREATE TABLE question_3_view AS
+SELECT
+DISTINCT ON (vin)
+vin,
+electric_vehicle_type
+FROM
+ev_adoption_port_project_processed
