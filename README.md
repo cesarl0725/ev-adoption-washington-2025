@@ -6,10 +6,10 @@
 This project analyzes **electric and hybrid vehicle adoption trends in Washington State (2025)**
 
 The goal of the project is to answer these key **business questions**:
-- What are the top 10 counties with the most electric cars?
+- What are the top 10 counties with the most electric/hybrid cars?
 - What are the top 5 most popular car brands in the top 10 counties?
 - Are fully electric cars (BEVs) more common than plug-in hybrids (PHEVs)?
-- How has EV adoption changed by model year?
+- How has EV/Hybrid adoption changed by model year?
 - Which cars have the best electric range?
 - How does price relate to range?
 - Which electric utilities serve the most EVs?
@@ -94,9 +94,9 @@ This greatly aids my analysis as consolidating transformations into a single que
 
 ---
 ## Data Analysis
-### Question 1: “What are the top 10 counties with the most electric cars?”
+### Question 1: “What are the top 10 counties with the most electric/hybrid cars?”
 **To begin**, I started by validating that the dataset contained the necessary fields to answer our first question!
-“What are the top 10 counties with the most electric cars?”
+“What are the top 10 counties with the most electric/hybrid cars?”
 This ensured that the analysis would be accurate and based on complete data.
 
 I proceeded by writing an initial query to count vehicles by county using COUNT(*) with a GROUP BY clause for county. However, I quickly noticed this approach contained a major mistake as VIN values can appear multiple times due to duplicate registrations or updates, which would instantly ruin the accuracy of the query.
@@ -109,23 +109,23 @@ The final step for this question is **visualization**, which, for this particula
 King possesses more EVs than any other county. Even when taking into account its closest competitor, Snohomish King still possesses 5,319 move EVs.
 
 **Based on this insight**, I would recommend an organization trying to break into the Washington state region to try one of two things
-- **Break into the existing King market** If an EV seller is attempting to have success from the start, the best place to begin is King, as its population has a taste for EVs already.
+- **Break into the existing King market** If an EV/hybrid seller is attempting to have success from the start, the best place to begin is King, as its population has a taste for EVs already.
 - **Build your own new market** Based on the success of EVs in King, it can be inferred that other neighboring counties could develop a taste for EVs of their own. If immediate gains are not the priority, it is worth considering trying to build your own market of EVs in another county.
 
 ### Question 2: "What are the top 5 most popular car brands within the top 10 counties?"
-To answer this question, I created a query to see the number of EVs owned for each brand in each county. The query was straightforward, as I wanted to do all the filtering and manipulating in Tableau to further develop my skills on that end.
-Although the query did go through multiple iterations as I was unsure of how to handle the COUNT function. The version I ended up with is COUNT(DISTINCT vin) as it accurately counts unique EVs while  avoiding duplicates. It also groups by both make and county, giving a clear breakdown of EV adoption by brand in each location.
+To answer this question, I created a query to see the number of EVs/hybrids owned for each brand in each county. The query was straightforward, as I wanted to do all the filtering and manipulating in Tableau to further develop my skills on that end.
+Although the query did go through multiple iterations as I was unsure of how to handle the COUNT function. The version I ended up with is COUNT(DISTINCT vin) as it accurately counts unique EVs while  avoiding duplicates. It also groups by both make and county, giving a clear breakdown of EV/hybrid adoption by brand in each location.
 
-After completing the visualization through a mixture of filters and sets, I was able to draw multiple conclusions that can be used in a variety of business scenarios. The main pattern I noticed was that the distribution of EV ownership became more skewed
+After completing the visualization through a mixture of filters and sets, I was able to draw multiple conclusions that can be used in a variety of business scenarios. The main pattern I noticed was that the distribution of EV/hybrid ownership became more skewed
 in Tesla's favor as you went down the list.
 
-**Based on this insight** If an EV manufacturer is trying to break into the Washington market, they must be careful about which county they strike, as the smaller counties clearly favor Teslas more than any other EV brand. 
+**Based on this insight** If an EV/hybrid manufacturer is trying to break into the Washington market, they must be careful about which county they strike, as the smaller counties clearly favor Teslas more than any other EV/hybrid brand. 
 My recommendation would be to start with the larger markets like King or Pierce before expanding as their markets clearly show more brand diversity. 
 
 ### Question 3: "Are fully electric cars (BEVs) more common than plug-in hybrids (PHEVs)?"
 To answer this question, I created a query to isolate the EV type for each distinct vehicle using its VIN. The goal was to determine whether fully electric cars (BEVs) are more common than plug-in hybrids (PHEVs). I used PostgreSQL’s DISTINCT ON function, which allowed me to extract only one row per VIN, ensuring that each vehicle was counted once, even if it appeared multiple times in the dataset.
 
-Afterward I completed the visualization in the form of a pie chart, which showed that BEVs are preferred 25% more than PHEVs.
+Afterward, I completed the visualization in the form of a pie chart, which showed that BEVs are preferred 25% more than PHEVs.
 
 **Based on this insight** If an EV manufacturer is trying to break into the Washington market, they should prioritize making BEVs, as the market has a preference for that type of vehicle.
 
