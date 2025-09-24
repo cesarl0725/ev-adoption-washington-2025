@@ -1,7 +1,7 @@
 /*
 Question 1: “What are the top 10 counties with the most electric cars?”
 Analysis Query 1
-- Purpose: To solve the first analysis question, "What are the top 10 counties with the most electric cars?". This is done by counting the
+- Purpose: To solve the first analysis question, "What are the top 10 counties with the most electric/hybrid cars?". This is done by counting the
 distinct rows of the table through the count() and grouping them by the county. Allowing us to discover the distribution of
 electric vehicles by county.
 
@@ -27,7 +27,7 @@ LIMIT
 /*
 Question 2: "What are the top 5 most popular car brands within the top 10 counties?"
 Analysis Query 2
-- Purpose: To see the number of EVs owned for each brand in each county to identify the 5 most popular
+- Purpose: To see the number of EVs/hybrids owned for each brand in each county to identify the 5 most popular
 brands in each county during the visualization process.
 
 - Code detail/insight during the production of this query, I had trouble deciding how to structure the COUNT() function.
@@ -50,10 +50,10 @@ Number_of_EVS DESC
 /*
 Question 3: "Are fully electric cars (BEVs) more common than plug-in hybrids (PHEVs)?""
 Analysis Query 3
-- Purpose: To find the EV type for each distinct vin. This allows me to see which EV type is more popular
+- Purpose: To find the vehicle type for each distinct vin. This allows me to see which vehicle type is more popular
 during the visualization process.
 
--Code detail/insight: To isolate the EV type of each vehicle, I used the Postgres unique function DISTINCT ON.
+-Code detail/insight: To isolate the vehicle type of each vehicle, I used the Postgres unique function DISTINCT ON.
 Because it allows me to extract only one row for that specific value, which in this case would be the vin.
 */
 
