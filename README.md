@@ -99,16 +99,14 @@ This greatly aids my analysis as consolidating transformations into a single que
 “What are the top 10 counties with the most electric/hybrid cars?”
 This ensured that the analysis would be accurate and based on complete data.
 
-I proceeded by writing an initial query to count vehicles by county using COUNT(*) with a GROUP BY clause for county. However, I quickly noticed this approach contained a major mistake as VIN values can appear multiple times due to duplicate registrations or updates, which would instantly ruin the accuracy of the query.
-
-To correct this, I updated the query to use COUNT(DISTINCT vin). This guarantees that each unique vehicle is counted only once, providing a truly accurate measure of electric vehicle distribution by county.
-Finally, I added an ORDER BY clause to sort the results in descending order and applied LIMIT 10 to return only the top 10 counties. This helps me streamline the visualization.
-With that, the first question has been answered!
+I began the analysis with a query using COUNT(*) and GROUP BY county to find the top counties by vehicle count. However, this approach was inaccurate because VINs can appear multiple times, inflating the totals.
+To fix this, I grouped by VIN first and used MIN(TRIM(UPPER(county))) to assign each VIN to a single standardized county. This ensures every VIN is counted only once across the dataset.
+Finally, I aggregated by county, sorted the results in descending order, and applied LIMIT 10 to return the top 10 counties. This method provides an accurate view of electric/hybrid vehicle distribution.
 
 The final step for this question is **visualization**, which, for this particular question, is straightforward, as the best way to demonstrate the top 10 countries is a bar chart. Through the visualization of the data, the dominance of King became clear.
-King possesses more EVs than any other county. Even when taking into account its closest competitor, Snohomish King still possesses 5,319 move EVs.
+King possesses more EVs than any other county by a large majority. Making it a promising market for companies trying to break into the region.
 
-**Based on this insight**, I would recommend an organization trying to break into the Washington state region to try one of two things
+**Based on this insight**, I would recommend an EV/Hybrid manufacturer trying to break into the Washington state region to try one of two things
 - **Break into the existing King market** If an EV/hybrid seller is attempting to have success from the start, the best place to begin is King, as its population has a taste for EVs already.
 - **Build your own new market** Based on the success of EVs in King, it can be inferred that other neighboring counties could develop a taste for EVs of their own. If immediate gains are not the priority, it is worth considering trying to build your own market of EVs in another county.
 
