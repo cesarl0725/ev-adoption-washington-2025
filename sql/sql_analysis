@@ -1,28 +1,29 @@
 /*
-Question 1: “What are the top 10 counties with the most electric cars?”
-Analysis Query 1
-- Purpose: To solve the first analysis question, "What are the top 10 counties with the most electric/hybrid cars?". This is done by counting the
-distinct rows of the table through the count() and grouping them by the county. Allowing us to discover the distribution of
-electric vehicles by county.
+Purpose: To answer the first business question, "What are the top 10 counties with the most electric/hybrid cars?". By counting
+the number of unique vins per county, allowing me to see an accurate vehicle count for the top 10 counties.
 
-- Code detail/insight: During the first version of this query, I made a vital mistake, as I did not use distinct within count()
-making my result inaccurate, as Vin instances sometimes repeat. Thankfully, I caught on and fixed the error.
+Details/Insights: This query went through many variations as I kept running into the issue of counting the same vin in
+multiple counties.The way I resolved this was by isolating each vin into one specific county, allowing me to view each
+county's vin count in isolation. Additionally, I also made county into an aggregate function so I would 
+not have to use it in my GROUP BY clause, as it could destroy my query.
 */
 
 CREATE TABLE question_1_view AS
 SELECT
-count(DISTINCT vin) AS electric_vehicle_count,
-county
+county,
+COUNT(*) AS ev_count
 FROM
-ev_adoption_port_project_processed
+(
+SELECT vin, MIN(TRIM(UPPER(county))) AS county
+FROM ev_adoption_port_project_processed
+WHERE county IS NOT NULL
+GROUP BY vin
+) one_per_vin
 GROUP BY
 county
-HAVING
-county IS NOT NULL
 ORDER BY
-electric_vehicle_count DESC
-LIMIT
-10
+ev_count DESC
+LIMIT 10;
 --------------------------------------------------------------------------------------------------------------------------------------
 /*
 Question 2: "What are the top 5 most popular car brands within the top 10 counties?"
