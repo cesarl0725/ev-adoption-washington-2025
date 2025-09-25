@@ -4,7 +4,7 @@ the number of unique vins per county, allowing me to see an accurate vehicle cou
 
 Details/Insights: This query went through many variations as I kept running into the issue of counting the same vin in
 multiple counties.The way I resolved this was by isolating each vin into one specific county, allowing me to view each
-county's vin count in isolation. Additionally, I also made county into an aggregate function so I would 
+counties vin count in isolation. Additionally, I also made county into an aggregate function so I would 
 not have to use it in my GROUP BY clause, as it could destroy my query.
 */
 
